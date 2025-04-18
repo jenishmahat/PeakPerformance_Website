@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peak Performance Sports Club</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Peak Performance Logo" />
+      <span>Peak Performance Sport Club</span>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <section class="hero-banner">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Elevate Your Game</h1>
+      <p>Join Peak Performance Sports Club — where fitness meets community and champions are built.</p> <br>
+      <a href="membership.html" class="btn">Join Now</a>
+      <br>
+      <p class="para-dec">     Our mission is to inspire healthy living through expert guidance, community driven workouts, and stateof the art equipment. Whether you're a beginner or a seasoned athlete, we provide the support you need to achieve your personal fitness goals.
+      </p>
+    </div>
+  </section>
+  
+
+  <section class="features">
+    <div class="feature-box" onclick="toggleDetail(this)">
+      <img src="images/gym.jpg" alt="Gym Area">
+      <h3>Modern Facilities</h3>
+      <p>State-of-the-art equipment to support all levels of training.</p>
+      <div class="detail-text hidden">
+        <p>Our gym features free weights, strength machines, treadmills, and cardio zones with 24/7 access. Everything is maintained daily for a clean, safe experience.</p>
+      </div>
+    </div>
+  
+    <div class="feature-box" onclick="toggleDetail(this)">
+      <img src="images/trainer.jpg" alt="Trainers">
+      <h3>Expert Trainers</h3>
+      <p>Certified professionals helping you achieve your fitness goals.</p>
+      <div class="detail-text hidden">
+        <p>Our personal trainers are nationally certified and create personalized workout plans to suit every fitness level — from beginner to pro.</p>
+      </div>
+    </div>
+  
+    <div class="feature-box" onclick="toggleDetail(this)">
+      <img src="images/groupworkout.jpg" alt="Group Workout">
+      <h3>Community Events</h3>
+      <p>Regular events and challenges to stay motivated together.</p>
+      <div class="detail-text hidden">
+        <p>Join fitness bootcamps, monthly challenges, yoga weekends, and club runs to build community and boost consistency through fun group activities.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Peak Performance Sports Club | All rights reserved</p>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:info@peakperformance.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+  
+</body>
+</html>

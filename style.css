@@ -1,0 +1,714 @@
+/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #004d2c;
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo section */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .logo img {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Navigation */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    color: white;
+  
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover, nav ul li a.active {
+    color: #ffd700;
+    text-decoration: underline;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Navigation menu responsivness for small screen */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block; /
+    }
+  
+    nav {
+      position: relative;
+      width: 100%;
+    }
+  
+    nav ul {
+      display: none; 
+      flex-direction: column;
+      width: 100%;
+      background-color: #004d2c;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      padding: 1rem 2rem;
+      z-index: 99;
+    }
+  
+    nav ul.show {
+      display: flex; 
+    }
+  
+    nav ul li {
+      text-align: left;
+      margin-bottom: 0.5rem;
+    }
+  
+    nav ul li a {
+      display: block;
+      padding: 0.5rem 0;
+      color: white;
+      width: 100%;
+    }
+  }
+/* Navigation Ends*/  
+  
+  .hero-banner {
+    position: relative;
+    background: linear-gradient(rgba(2, 48, 32, 0.75), rgba(2, 48, 32, 0.75)),
+                url('images/background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .hero-banner .overlay {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero-banner .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  
+  .hero-banner h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px #000;
+    margin-bottom: 1rem;
+  }
+   
+
+  .hero-content p {
+    margin-top: 1.5rem;
+    color: #f0f0f0;
+    font-size: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  }
+
+  .hero-content .para-dec{
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    background-color: #ff914d;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ff6a00;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #fff;
+  }
+  
+  .feature-box {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .feature-box:hover {
+    background-color: #fdf6e3;
+    transform: scale(1.03);
+  }
+  
+  .detail-text {
+    margin-top: 10px;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .feature-box img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #004d2c; 
+    color: white;
+    border-top: 1px solid #ccc;
+  }
+  
+  footer .social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    flex-wrap: wrap;
+
+  }
+  
+  footer .social-icons a:hover {
+    color: #ffd700; /* gold on hover */
+  }
+  
+
+
+/* Layout for very small screens */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+  /* Activities Page Styling*/
+  
+  
+  .activities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    align-items: stretch;
+  }
+  
+ 
+  .activity-card {
+    position: relative;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .activity-card:hover {
+    background-color: #fdf6e3;
+    transform: scale(1.02);
+  }
+  
+  .activity-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .activity-card .detail-text {
+    margin-top: 0.8rem;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  
+  .activity-card h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #222;
+  }
+  
+  .activity-card p {
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: #555;
+  }
+
+
+  /* Activities Page Styling ends*/
+
+
+
+/* Mmembership page styling*/
+.membership-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.plan-card {
+  background-color: #f9f9f9;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.plan-card h3 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.plan-card .price {
+  font-size: 1.4rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  max-width: 240px;
+}
+
+.plan-card ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.plan-card .btn {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #ff914d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.plan-card .btn:hover {
+  background-color: #ff6a00;
+}
+
+.highlight {
+  border: 2px solid #ffd700;
+  background-color: #fffbe6;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+/* Mmembership page styling ends====*************************************************************************/
+
+/* Event Page Styles*/
+
+
+
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.calendar-header button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #004d2c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calendar-header button:hover {
+  background-color: #006644;
+}
+
+.calendar-wrapper {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Calendar Header */
+.calendar-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #004d2c;
+}
+
+/* Calendar Grid */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 800px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  margin: 0 auto 2rem;
+}
+
+/* Calendar Cells */
+.calendar div {
+  padding: 1rem;
+  border: 1px solid #050000;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Day Labels */
+.calendar .day-name {
+  background-color: #004d2c;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Event Highlighted Days */
+.calendar .event-day {
+  background-color: #ffd700;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.calendar .today {
+  border: 2px solid #4dd5ff;
+  box-shadow: 0 0 8px rgba(77, 184, 255, 0.7);
+  background-color: bisque;}
+
+
+.calendar .event-day:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .calendar {
+    gap: 5px;
+  }
+
+  .calendar div {
+    padding: 0.8rem 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .calendar-header h2 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Event Cards Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+/* Event Card Styling */
+.event-card {
+  background: #fff;
+  border-left: 6px solid #ffd700;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card h3 {
+  color: #222;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Event Page Styles ENDS*****************************************************************************************************/
+
+/* About US CSS*/
+  .about-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .team {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+  }
+  
+  .team h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .trainer-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .trainer-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .trainer-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .trainer-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .trainer-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* About US Page Styles Ends*/
+
+  /* Contact Us  CSS */
+  .contact-wrapper {
+    padding: 3rem 1rem;
+    background-color: #f4f4f4;
+  }
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1100px;
+    margin: auto;
+    gap: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info {
+    font-size: 1.05rem;
+    color: #333;
+  }
+  
+  .contact-info h2 {
+    margin-bottom: 1rem;
+    color: #004d2c;
+    font-size: 1.6rem;
+  }
+  
+  .contact-info p {
+    margin: 0.5rem 0;
+  }
+  
+  .contact-info a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Form Styling */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin-top: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #004d2c;
+    outline: none;
+  }
+  
+  .contact-form .btn {
+    margin-top: 1.5rem;
+    background-color: #ff914d;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form .btn:hover {
+    background-color: #ff6a00;
+  }
+  
+  .form-feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: green;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+      padding: 1.5rem;
+    }
+  
+    .contact-wrapper {
+      padding: 2rem 1rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+    }
+  }
+
+
